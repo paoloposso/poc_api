@@ -13,7 +13,9 @@ defmodule PocApi.Router do
 
   get("/", do: conn |> send_resp(200, "OK"))
 
-  get("/characters", do: send_resp(conn, 200, retrieve_by_id(conn.params["id"])))
+  get("/users", do: send_resp(conn, 200, retrieve_by_id(conn.params["id"])))
+
+  # post("/user", do: send_resp(conn, 200, retrieve_by_id(conn.params["id"])))
 
   match(_, do: send_resp(conn, 404, "Not Found"))
 

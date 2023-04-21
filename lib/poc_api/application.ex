@@ -8,7 +8,7 @@ defmodule PocApi.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {Plug.Cowboy, scheme: :http, plug: PocApi.Router, options: [port: 8080]}
+      {Plug.Cowboy, scheme: :http, plug: PocApi.Router, options: [port: 8080]},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
